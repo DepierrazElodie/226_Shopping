@@ -5,13 +5,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
-        Cart cart = new Cart();
-        
+        Cart _cart = new Cart();
+       
+
 
         
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+          foreach(Article article in _cart.Articles)
+            {
+                _cart.Remove( article);
+            }
         }
     }
 }

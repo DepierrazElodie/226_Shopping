@@ -1,29 +1,28 @@
-﻿using System.Net.Http.Headers;
-
-namespace Shopping
+﻿namespace Shopping
 {
-    public class Cart : ICollectionOfArticles
+    public class Cart
     {
         #region private attributes
         private List<Article> _articles = new List<Article>();
         #endregion private attributes
 
         #region public methods
+
         public void Add(List<Article> articles)
         {
             throw new NotImplementedException();
         }
 
-        public List<Article> Remove(List<Article>? articles = null)
+        public void Remove(List<Article>? articles = null)
         {
-            throw new NotImplementedException();
+            Articles.Remove(articles);
         }
 
         public List<Article> Articles
         {
             get
             {
-                throw new NotImplementedException();
+               return _articles ;
             }
         }
         #endregion public methods
