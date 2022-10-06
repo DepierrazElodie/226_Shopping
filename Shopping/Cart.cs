@@ -15,7 +15,7 @@
 
         public void Remove(List<Article>? articles = null)
         {
-            Articles.Remove(articles);
+            //Articles.Remove(articles);
         }
 
         public List<Article> Articles
