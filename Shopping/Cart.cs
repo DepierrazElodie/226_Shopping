@@ -13,14 +13,11 @@
             throw new NotImplementedException();
         }
 
-<<<<<<< HEAD
         public void Remove(List<Article>? articles = null)
-=======
-        public List<Article> Remove(Boolean empty = false)
->>>>>>> 07ac386300b29db75e3a32b32f2523d5fd50ed0f
         {
-            //Articles.Remove(articles);
+            throw new NotImplementedException();
         }
+
 
         public List<Article> Articles
         {
