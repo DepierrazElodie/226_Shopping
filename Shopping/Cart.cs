@@ -13,20 +13,20 @@
             _articles.AddRange(articles);
         }
 
-        public List<Article> Remove(Boolean empty = false)
+        public List<Article> Remove(Boolean clearCart = false)
         {
+                List<Article> articlesReadyToCheckout = new List<Article>();
+                 articlesReadyToCheckout.Add(_articles.Last());
+                _articles.Remove(_articles.Last());
 
-            List<Article> CheckoutPrepare = new List<Article>();
-
-            CheckoutPrepare.Add(_articles.Last());
-            _articles.Remove(_articles.Last());
-            if (empty==false)
-            { CheckoutPrepare.AddRange(_articles);
+            
+            if (clearCart) 
+            {         
+                articlesReadyToCheckout.AddRange(_articles);
                 _articles.Clear();
             }
-            
-            return CheckoutPrepare;
-           
+            return articlesReadyToCheckout;
+
         }
 
 
