@@ -13,7 +13,7 @@
             throw new NotImplementedException();
         }
 
-        public void Remove(List<Article>? articles = null)
+        public List<Article> Remove(Boolean empty = false)
         {
             throw new NotImplementedException();
         }
