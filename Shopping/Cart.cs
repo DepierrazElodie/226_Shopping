@@ -15,9 +15,17 @@
 
         public List<Article> Remove(Boolean empty = false)
         {
-            List<Article> machin = new List<Article>(); machin = _articles;
+
+            List<Article> CheckoutPrepare = new List<Article>();
+
+            CheckoutPrepare.Add(_articles.Last());
+            _articles.Remove(_articles.Last());
+            if (empty==false)
+            { CheckoutPrepare.AddRange(_articles);
+                _articles.Clear();
+            }
             
-            return machin;
+            return CheckoutPrepare;
            
         }
 
