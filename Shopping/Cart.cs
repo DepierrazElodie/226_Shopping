@@ -10,12 +10,15 @@
 
         public void Add(List<Article> articles)
         {
-            throw new NotImplementedException();
+            _articles.AddRange(articles);
         }
 
         public List<Article> Remove(Boolean empty = false)
         {
-            throw new NotImplementedException();
+            List<Article> machin = new List<Article>(); machin = _articles;
+            
+            return machin;
+           
         }
 
 
