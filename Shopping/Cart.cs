@@ -29,6 +29,13 @@
 
         }
 
+<<<<<<< HEAD
+=======
+        public void Release()
+        {
+            throw new NotImplementedException();
+        }
+>>>>>>> c1c94a31ffabb762ee1ff40f8df36e678aabaa17
 
         public List<Article> Articles
         {
@@ -37,6 +44,8 @@
                return _articles ;
             }
         }
+
+        public bool? IsReleased { get; set; }
         #endregion public methods
     }
 }
