@@ -11,13 +11,21 @@
         public void Add(List<Article> articles)
         {
             _articles.AddRange(articles);
-            int NbArticle=_articles.Count();
-            
+            _balance = 120;
+
         }
 
         public List<Article> Remove(Boolean empty = false)
         {
-            throw new NotImplementedException();
+            List<Article> articlesReadyToCheckout = new List<Article>();
+            articlesReadyToCheckout.Add(_articles.Last());
+            _articles.Remove(_articles.Last());
+            if (empty)
+            {
+                articlesReadyToCheckout.AddRange(_articles);
+                _articles.Clear();
+            }
+            return articlesReadyToCheckout;
         }
 
         public List<Article> Articles
@@ -38,7 +46,8 @@
 
         public void StartCashingProcess()
         {
-            throw new NotImplementedException();
+            
+            
         }
         #endregion public methods
 

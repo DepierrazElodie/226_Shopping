@@ -16,16 +16,19 @@
 
         public void Cash(float balance)
         {
+            //doit vider l'argent de la balance
             throw new NotImplementedException();
         }
 
         public void InsertCard(CreditCard creditCard)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("insert card");
+            
         }
 
         public void RemoveCard()
         {
+            //step 8 même chose qu'au 6 mais inversé
             throw new NotImplementedException();
         }
         #endregion public methods

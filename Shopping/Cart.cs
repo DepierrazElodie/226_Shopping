@@ -28,14 +28,11 @@
             return articlesReadyToCheckout;
 
         }
-
-<<<<<<< HEAD
-=======
         public void Release()
         {
+            //Ranger le panier
             throw new NotImplementedException();
         }
->>>>>>> c1c94a31ffabb762ee1ff40f8df36e678aabaa17
 
         public List<Article> Articles
         {
