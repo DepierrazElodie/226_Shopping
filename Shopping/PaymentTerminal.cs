@@ -16,20 +16,25 @@
 
         public void Cash(float balance)
         {
-            //doit vider l'argent de la balance
-            throw new NotImplementedException();
+            
+            Console.WriteLine();
+            _checkout._balance = 0;
+
         }
 
         public void InsertCard(CreditCard creditCard)
         {
-            Console.WriteLine("insert card");
+            
+            
+            Console.WriteLine(creditCard);
+            CreditCard = true;
             
         }
 
         public void RemoveCard()
         {
-            //step 8 même chose qu'au 6 mais inversé
-            throw new NotImplementedException();
+            
+            CreditCard = null;
         }
         #endregion public methods
     }

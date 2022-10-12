@@ -4,7 +4,7 @@
     {
         #region private attributes
         private List<Article> _articles = new List<Article>();
-        private float _balance = 0f;
+        public float _balance = 0f;
         #endregion private attributes
 
         #region public methods
@@ -56,6 +56,7 @@
         {
             {
                 throw new NotImplementedException();
+
             }
         }
         #endregion private methods
