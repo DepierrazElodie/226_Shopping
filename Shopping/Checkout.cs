@@ -4,14 +4,14 @@
     {
         #region private attributes
         private List<Article> _articles = new List<Article>();
-        public float _balance = 0f;
+        private float _balance = 0f;
         #endregion private attributes
 
         #region public methods
         public void Add(List<Article> articles)
         {
             _articles.AddRange(articles);
-            _balance = 120;
+            _balance=120;
 
         }
 
@@ -46,8 +46,8 @@
 
         public void StartCashingProcess()
         {
-            
-            
+
+            _balance = 0f;
         }
         #endregion public methods
 

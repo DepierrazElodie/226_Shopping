@@ -3,6 +3,7 @@
     public class PaymentTerminal
     {
         #region private attributes
+        private CreditCard _creditCard = null;
         private Checkout _checkout = new Checkout();
         #endregion private attributes
 
@@ -12,29 +13,31 @@
             _checkout = checkout;
         }
 
-        public object? CreditCard { get; set; }
+        public  CreditCard CreditCard{
+            
+            get
+            {
+                return _creditCard;
+            }
+        }
 
         public void Cash(float balance)
         {
-            
-            Console.WriteLine();
-            _checkout._balance = 0;
+            _checkout.StartCashingProcess();
 
         }
 
-        public void InsertCard(CreditCard creditCard)
+        public void InsertCard(CreditCard creditCard )
         {
-            
-            
-            Console.WriteLine(creditCard);
-            CreditCard = true;
+
+            _creditCard = creditCard;
             
         }
 
         public void RemoveCard()
         {
             
-            CreditCard = null;
+            _creditCard = null;
         }
         #endregion public methods
     }

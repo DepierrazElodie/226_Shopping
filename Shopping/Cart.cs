@@ -31,7 +31,8 @@
         public void Release()
         {
             //Ranger le panier
-            throw new NotImplementedException();
+            _articles.Clear();
+            
         }
 
         public List<Article> Articles
@@ -42,7 +43,12 @@
             }
         }
 
-        public bool? IsReleased { get; set; }
+        public bool? IsReleased {
+            get
+            {
+                return _articles.Count()==0;
+            }
+        }
         #endregion public methods
     }
 }
